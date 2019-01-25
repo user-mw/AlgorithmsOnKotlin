@@ -1,7 +1,15 @@
 package com.workout.algorithmsonkotlin.algorithms
 
 class SearchingAlgorithms {
-    fun linearSearch(array: Array<Int>, valueToFind: Int) = array.indexOf(valueToFind)
+    fun linearSearch(array: Array<Int>, valueToFind: Int): Int {
+        for(index in 0 until array.size) {
+            if(array[index] == valueToFind) {
+                return index
+            }
+        }
+
+        return -1
+    }
 
     fun binarySearch(array: Array<Int>, valueToFind: Int): Int {
         var lowIndex = 0
